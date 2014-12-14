@@ -1,5 +1,15 @@
-library(shiny)
-library(rCharts)
+require(shiny)
+
+pkgTest <- function(x)
+{
+        if (!require(x,character.only = TRUE))
+        {
+                install.packages(x,dep=TRUE)
+                if(!require(x,character.only = TRUE)) stop("Package not found")
+        }
+}
+
+pkgTest("rCharts")
 
 one_gram <- read.csv("www/one_gram.csv")
 
