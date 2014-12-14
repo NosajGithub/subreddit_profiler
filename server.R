@@ -11,6 +11,7 @@ pkgTest <- function(x)
 
 pkgTest("ggplot2")
 pkgTest("rCharts")
+pkgTest("plyr")
 
 one_gram <- read.csv("www/one_gram.csv")
 two_gram <- read.csv("www/two_gram.csv")
@@ -71,7 +72,6 @@ shinyServer(function(input, output) {
                               axis.text.y  = element_text(size=12, color = "black")
                               #,plot.title = element_text(vjust=0.4,size=16, face="bold")
                               ) +
-                        scale_x_discrete(labels = function(x) str_wrap(x, width = 50)) +
                         coord_flip())
                 
         })
