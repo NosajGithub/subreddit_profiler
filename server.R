@@ -4,14 +4,19 @@ pkgTest <- function(x)
 {
         if (!require(x,character.only = TRUE))
         {
-                install.packages(x,dep=TRUE)
+                if(x != "rCharts"){
+                        install.packages(x,dep=TRUE)
+                } else {
+                        install_github('rCharts', 'ramnathv')
+                }
                 if(!require(x,character.only = TRUE)) stop("Package not found")
         }
 }
 
 pkgTest("ggplot2")
-pkgTest("rCharts")
 pkgTest("plyr")
+pkgTest("devtools")
+pkgTest("rCharts")
 
 one_gram <- read.csv("www/one_gram.csv")
 two_gram <- read.csv("www/two_gram.csv")
