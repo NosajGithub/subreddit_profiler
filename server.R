@@ -58,7 +58,7 @@ shinyServer(function(input, output) {
                 all_final[6,2] <- formatC(as.integer(all_final[6,2]),format="d",big.mark=",")
                 all_final
                 },
-                options = list(pagingType = "simple", bFilter = FALSE, bPaginate = FALSE, bSearchable = FALSE) 
+                options = list(pagingType = "simple", searching = FALSE, paging = FALSE, searchable = FALSE)
         )
                 
         # Fill in the spot we created for a plot
@@ -89,7 +89,7 @@ shinyServer(function(input, output) {
                                "Most Common Words" = common_words)
 
                 data[data$subreddit == input$chosen_subreddit, -2]},
-                options = list(pagingType = "simple", bFilter = FALSE, bPaginate = FALSE, bSearchable = FALSE) 
+                options = list(pagingType = "simple", searching = FALSE, paging = FALSE, searchable = FALSE)
         )
         
         output$timechart <- renderChart2({
