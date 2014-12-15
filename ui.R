@@ -13,6 +13,7 @@ pkgTest <- function(x)
         }
 }
 
+pkgTest("devtools")
 pkgTest("rCharts")
 
 one_gram <- read.csv("www/one_gram.csv")
