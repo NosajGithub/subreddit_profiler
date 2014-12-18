@@ -29,7 +29,7 @@ shinyUI(
                 
                 fluidRow(
                         column(3,
-                               selectInput("chosen_subreddit", "Subreddit:", choices=unique(one_gram$subreddit)),
+                               selectInput("chosen_subreddit", "Subreddit:", choices= as.character(unique(one_gram$subreddit))),
                                br()
                         ),
                 fluidRow(
