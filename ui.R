@@ -1,5 +1,6 @@
 require(shiny)
 
+# require(rCharts)
 pkgTest <- function(x)
 {
         if (!require(x,character.only = TRUE))
