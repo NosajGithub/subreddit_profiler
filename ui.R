@@ -98,7 +98,7 @@ shinyUI(
                                                             "Since reddit has grown in popularity over time, that favors more recent submissions.", br(), br()))),
                                                             
                                                             strong("The Code and Tools:"),br(), 
-                                                            HTML(paste0(tags$span(style="color:#BEBEBE","All of the code for this project can be found on Github", a("here", href="https://github.com/NosajGithub"),".",br(), 
+                                                            HTML(paste0(tags$span(style="color:#BEBEBE","All of the code for this project can be found on Github", a("here", href="https://github.com/NosajGithub/subreddit_profiler"),".",br(), 
                                                             "I scraped the data with ", a("PRAW",href="https://praw.readthedocs.org/en/"), ". I stored the data on ",a("S3",href="http://aws.amazon.com/s3/"),".",br(),
                                                             "I analyzed the data with ",a("Amazon Elastic Map Reduce",href="http://aws.amazon.com/elasticmapreduce/")," and ",a("MRJob",href="https://pythonhosted.org/mrjob/"),".",br(),
                                                             "This is a ",a("Shiny app",href="http://www.rstudio.com/products/shiny/"),".",br(),br()))),
